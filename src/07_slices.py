@@ -12,26 +12,36 @@ Use Python's slice syntax to achieve the following:
 a = [2, 4, 1, 7, 9, 6]
 
 # Output the second element: 4:
-print()
+print(a[1])
 
 # Output the second-to-last element: 9
-print()
+print(a[-2:-3:-1])
 
 # Output the last three elements in the array: [7, 9, 6]
-print()
+print(a[-3::1])
 
 # Output the two middle elements in the array: [1, 7]
-print()
+print(a[2:-2])
+
+"""
+# The code above will only work for an array of this length
+# This will print the middle two elements rounded DOWN if odd length.
+print(a[(math.floor(len(a)/2)-1):(math.floor(len(a)/2)+1)])
+# This will print the middle two elements rounded UP if odd length.
+print(a[(math.ceil(len(a)/2)-1):(math.ceil(len(a)/2)+1)])
+# This will print the middle two if EVEN length or three if ODD length in a given array.
+print(a[(math.floor(len(a)/2)-1):(math.ceil(len(a)/2)+1)])
+"""
 
 # Output every element except the first one: [4, 1, 7, 9, 6]
-print()
+print(a[1:])
 
 # Output every element except the last one: [2, 4, 1, 7, 9]
-print()
+print(a[:-1])
 
 # For string s...
 
 s = "Hello, world!"
 
 # Output just the 8th-12th characters: "world"
-print()
+print(s[7:12])
